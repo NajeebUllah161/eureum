@@ -5,7 +5,7 @@ const Footer = () => {
     <footer className="bg-black text-white">
       <div className="flex flex-col items-center justify-center px-4 py-8">
         <Image
-          src="/logo.svg"
+          src="/logo.png"
           alt="Aureum Private Society"
           width={120}
           height={70}
