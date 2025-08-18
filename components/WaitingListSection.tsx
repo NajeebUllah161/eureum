@@ -25,7 +25,7 @@ export default function WaitingListSection() {
   const {
     register,
     handleSubmit,
-    formState: { errors, isSubmitting },
+    formState: { errors },
     reset,
   } = useForm<WaitlistForm>({
     resolver: zodResolver(WaitlistSchema),
@@ -33,15 +33,24 @@ export default function WaitingListSection() {
   });
 
   async function onSubmit(values: WaitlistForm) {
-    console.log("🚀 ~ onSubmit ~ values:", values);
-    // TODO: send to your API/CRM
+    const { firstName, lastName, email, phone } = values;
+
+    const subject = encodeURIComponent("Join Waiting List");
+    const body = encodeURIComponent(
+      `Name: ${firstName}\nSurname: ${lastName}\nEmail: ${email}\nPhone: ${phone}`
+    );
+
+    const mailtoLink = `mailto:Info@aureum.social?subject=${subject}&body=${body}`;
+
+    window.location.href = mailtoLink;
+
     setSubmitted(true);
     reset();
     setTimeout(() => setSubmitted(false), 4000);
   }
 
   return (
-    <section className="bg-black text-white px-4 py-10 sm:py-14">
+    <section className="bg-black text-white px-4 py-10 sm:py-14" id="waiting-list">
       <div className="mx-auto max-w-4xl">
         <h2 className="text-center text-[clamp(1.5rem,3vw,2.25rem)] font-semibold tracking-wide">
           EXCLUSIVE WAITING LIST
