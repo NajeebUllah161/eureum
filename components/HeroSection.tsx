@@ -24,21 +24,24 @@ const HeroSection = () => {
         />
         <div className="mt-5 w-full max-w-xl mx-auto">
           <h1
-            className={`mx-auto font-normal uppercase text-white ${baskervville.className} text-[1.6rem] leading-tight sm:text-[2.5rem]`}
+            className={`mx-auto font-normal uppercase text-white ${baskervville.className} text-[clamp(2.4rem,2.5vw,3.5rem)] tracking-[-0.04em]`}
           >
             Preserving Elegance, Most exclusive club
           </h1>
 
           <p
             style={{ fontFamily: "Heiti SC" }}
-            className="mt-3 text-base sm:text-lg text-white/70"
+            className="mt-3 text-[clamp(0.9rem,1.5vw,1rem)] text-white/70"
           >
             Celebrate Every Moment in Timeless Luxury
           </p>
 
           <button
             style={{ fontFamily: "Heiti SC" }}
-            className="mt-6 w-full max-w-[14.5rem] h-12 rounded-2xl bg-[#C39E6F] text-black text-base sm:text-lg font-semibold active:scale-[0.98] mx-auto"
+            className="mt-6 w-full max-w-[clamp(12rem,20vw,12.5rem)] h-[clamp(2.8rem,4vw,2.8rem)]
+               rounded-2xl bg-[#C39E6F] text-black 
+               text-[clamp(0.9rem,1.5vw,1rem)] font-semibold 
+               active:scale-[0.98] mx-auto"
           >
             Join waiting list
           </button>

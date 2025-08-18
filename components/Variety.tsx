@@ -17,8 +17,7 @@ const Variety = () => {
       {items.map((item) => (
         <figure
           key={item.src}
-          className="group relative w-full overflow-hidden
-                     h-[42vw] min-h-[180px] md:h-[280px]"
+          className="group relative w-full overflow-hidden h-[42vw] min-h-[180px] md:h-[280px]"
         >
           <Image
             src={item.src}
@@ -35,11 +34,11 @@ const Variety = () => {
           <figcaption className="absolute inset-0 flex items-center justify-center">
             <div className="w-11/12 text-center text-white">
               <div
-                className={`text-lg sm:text-xl ${baskervville.className} tracking-[0.12em]`}
+                className={`${baskervville.className} tracking-[0.12em] text-[clamp(1rem,1.8vw,1.5rem)]`}
               >
                 {item.label}
               </div>
-              <div className="mx-auto mt-2 h-px w-16 bg-white/70" />
+              <div className="mx-auto mt-2 h-px w-[clamp(2.5rem,5vw,4rem)] bg-white/70" />
             </div>
           </figcaption>
         </figure>
