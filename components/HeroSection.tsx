@@ -36,15 +36,13 @@ const HeroSection = () => {
             Celebrate Every Moment in Timeless Luxury
           </p>
 
-          <button
+          <a
+            href="#waiting-list"
             style={{ fontFamily: "Heiti SC" }}
-            className="mt-6 w-full max-w-[clamp(12rem,20vw,12.5rem)] h-[clamp(2.8rem,4vw,2.8rem)]
-               rounded-2xl bg-[#C39E6F] text-black 
-               text-[clamp(0.9rem,1.5vw,1rem)] font-semibold 
-               active:scale-[0.98] mx-auto"
+            className="mt-6 w-full max-w-[clamp(12rem,20vw,12.5rem)] h-[clamp(2.8rem,4vw,2.8rem)] rounded-2xl bg-[#C39E6F] text-black text-[clamp(0.9rem,1.5vw,1rem)] font-semibold active:scale-[0.98] flex items-center justify-center mx-auto"
           >
             Join waiting list
-          </button>
+          </a>
         </div>
       </div>
     </section>
