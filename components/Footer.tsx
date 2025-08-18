@@ -12,7 +12,10 @@ const Footer = () => {
           className="h-auto w-[120px] sm:w-[140px]"
           priority
         />
-        <p className="mt-4 text-xs sm:text-sm text-white/70">
+        <p
+          style={{ fontFamily: "Heiti SC" }}
+          className="mt-4 text-xs sm:text-sm text-white/70"
+        >
           © {new Date().getFullYear()} — Copyright | All Rights Reserved
         </p>
       </div>
